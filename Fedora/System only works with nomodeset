@@ -1,0 +1,7 @@
+This error is because recent gnome system uses Wayland, but not every hardware supports it. To fix it, you need to force your system to use xorg, instead Wayland. 
+
+1 - Open file /etc/gdm/custom.conf 
+2 - Uncomment the line "WaylandEnable=false"
+3 - Open file /etc/default/grub
+4 - Remove the "nomodeset" from the file 
+5 - Run "sudo grub2-mkconfig -o /boot/grub2/grub.cfg" to update grub.
