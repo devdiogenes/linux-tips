@@ -1,0 +1,7 @@
+Find this line in the getWindowsForBinding function
+    windows = windows.filter( Main.isInteresting );
+
+Add the following line of code one line bellow it:
+    windows = windows.filter(w => w.get_monitor() === global.screen.get_current_monitor())
+    
+Source: https://github.com/linuxmint/cinnamon/issues/4330#issuecomment-558173425
